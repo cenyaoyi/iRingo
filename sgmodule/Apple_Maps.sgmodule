@@ -12,4 +12,4 @@ http-request ^https?:\/\/gspe\d*-ssl\.ls\.apple\.com(\/pep\/gcc) script-path=htt
 (^https?:\/\/gspe\d*-ssl\.ls\.apple\.)(com|cn)(\/.*)(environment=[a-z/-]{4,})(.*) $1$2$3environment=prod$5 header
 
 [MITM]
-hostname = %APPEND% gspe35-ssl.ls.apple.com, %APPEND% gspe1-ssl.ls.apple.com
+hostname = gspe35-ssl.ls.apple.com,gspe1-ssl.ls.apple.com
