@@ -15,7 +15,7 @@ macOS 12.0.1, iOS 15.1, iOS 14.8 测试通过
     - [Loon](#loon)
     - [Quantumult X](#quantumult-x)
     - [Surge](#surge)
-    - [`Clash`](#clash)
+    - [Clash](#clash)
 - [🌤天气](#天气)
   - [简介](#简介)
   - [功能列表](#功能列表)
@@ -116,10 +116,15 @@ macOS 12.0.1, iOS 15.1, iOS 14.8 测试通过
     6. [📰Apple News](#apple-news)：[Apple_News.sgmodule](./sgmodule/Apple_News.sgmodule?raw=true " Unlock Apple News 🇺🇸US")
       * 域名集:[Apple_News.list](./RuleSet/Apple_News.list?raw=true "Apple_News")
       * 更多预置策略组的模块请见[安装链接](#安装链接-4)
-### `Clash`
-  * Clash:
-    * 规则组:[Wikipedia_for_Look_Up.yaml](./RuleSet/Wikipedia_for_Look_Up.yaml?raw=true "Wikipedia for Look Up")
-    * 此规则组只作用于启用macOS的`词典`和维基百科搜索集成(此功能独立于Siri建议，所以可由Clash激活)。
+    7. [🌐iCloud 专用代理](#icloud-专用代理测试中有问题请反馈)
+      * 详见:[`Surge for macOS`with`网关模式`](#surge-for-macoswith网关模式)
+### Clash
+  * yaml需手动添加至配置文件的[Provider]:
+    1. [🔍Siri与搜索](#siri与搜索)：
+       * 规则组:[Wikipedia_for_Look_Up.yaml](./RuleSet/Wikipedia_for_Look_Up.yaml?raw=true "Wikipedia for Look Up")
+       * 此规则组只作用于启用macOS的`词典`和维基百科搜索集成(此功能独立于Siri建议，所以可由Clash激活)。
+    2. [🌐iCloud 专用代理](#icloud-专用代理测试中有问题请反馈)
+       * 规则组:[iCloud_Private_Relay.yaml](./RuleSet/iCloud_Private_Relay_QUIC.yaml?raw=true "iCloud Private Relay")
 ---
 
 # 🌤天气
@@ -353,6 +358,9 @@ macOS 12.0.1, iOS 15.1, iOS 14.8 测试通过
       * 🆕针对策略组为`🍎Apple`的模块:[Siri_Suggestions_for_Apple_icon.sgmodule](./sgmodule/Siri_Suggestions_for_Apple_icon.sgmodule?raw=true " Enable Siri Suggestions")
       * 🆕针对策略组为`🍎 Apple`的模块(如:Surgio):[Siri_Suggestions_for_Surgio.sgmodule](./sgmodule/Siri_Suggestions_for_Surgio.sgmodule?raw=true " Enable Siri Suggestions")
       * 🆕针对策略组为`🍎 苹果服务`的模块(如:ACL4SSR):[Siri_Suggestions_for_ACL4SSR.sgmodule](./sgmodule/Siri_Suggestions_for_ACL4SSR.sgmodule?raw=true " Enable Siri Suggestions")  
+    * Clash:
+      * 规则组:[Wikipedia_for_Look_Up.yaml](./RuleSet/Wikipedia_for_Look_Up.yaml?raw=true "Wikipedia for Look Up")
+      * 此规则组只作用于启用macOS的`词典`和维基百科搜索集成(此功能独立于Siri建议，所以可由Clash激活)。
 ### 旧版
   * 旧版，用重写(Rewrite)功能修改为固定地区
     * Loon:
